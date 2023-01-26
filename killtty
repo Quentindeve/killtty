@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+if [ -z $1 ]; then
+	echo "Usage:	  $0 <tty id>"
+	echo "Example:  $0 1	# This will kill /dev/tty1"
+	exit
+fi
+
+systemctl kill getty@tty$1
